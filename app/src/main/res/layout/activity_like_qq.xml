@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.cundong.viewdraghelper.qq.DragLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/drag_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bg">
+
+    <!--左边可以滑出的view-->
+    <LinearLayout
+        android:id="@+id/left_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:paddingBottom="50dp"
+        android:paddingLeft="10dp"
+        android:paddingRight="50dp"
+        android:paddingTop="50dp">
+
+        <ImageView
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:src="@mipmap/ic_launcher" />
+
+        <ListView
+            android:id="@+id/left_list"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+    </LinearLayout>
+
+    <!--中间的正文-->
+    <com.cundong.viewdraghelper.qq.MainContainer
+        android:id="@+id/main_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#ffffff"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#18B6EF"
+            android:orientation="vertical">
+
+            <com.cundong.viewdraghelper.view.ImmersiveView
+                android:layout_width="match_parent"
+                android:layout_height="0dip"
+                android:background="#18B6EF" />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:background="#18B6EF"
+                android:gravity="center_vertical">
+
+                <ImageView
+                    android:id="@+id/title_img"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_alignParentLeft="true"
+                    android:layout_centerInParent="true"
+                    android:layout_marginLeft="15dp"
+                    android:src="@mipmap/ic_launcher" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:text="Title"
+                    android:textSize="18sp" />
+            </RelativeLayout>
+        </LinearLayout>
+
+        <ListView
+            android:id="@+id/main_list"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+    </com.cundong.viewdraghelper.qq.MainContainer>
+</com.cundong.viewdraghelper.qq.DragLayout>
