@@ -45,6 +45,12 @@ public class LikeQQActivity extends AppCompatActivity {
         mLeftList = (ListView) findViewById(R.id.left_list);
         mMainList = (ListView) findViewById(R.id.main_list);
         mTitleImageView = (ImageView) findViewById(R.id.title_img);
+        mTitleImageView.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                mDragLayout.open();
+            }
+        });
 
         mMainContainer = (MainContainer) findViewById(R.id.main_layout);
 

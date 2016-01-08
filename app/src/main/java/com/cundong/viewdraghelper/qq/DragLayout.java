@@ -163,7 +163,9 @@ public class DragLayout extends FrameLayout {
         float percent = newLeft / (mRange * 1.0f);
 
         if (mOnDragStatusChangedListener != null) {
-            mOnDragStatusChangedListener.onDraging(percent);
+            if (mStatus != Status.Close && mStatus != Status.Open) {
+                mOnDragStatusChangedListener.onDraging(percent);
+            }
         }
 
         Status preStatus = mStatus;
@@ -201,31 +203,45 @@ public class DragLayout extends FrameLayout {
     }
 
     /**
-     * 往右滑动：percent变大
-     * 往左滑动：percent变小
+     * 往右滑动：percent:0.0->1.0
+     * 往左滑动：percent:1.0->0.0
      *
      * @param percent 左边大间距占可滑动距离的多少
      */
     private void animViews(float percent) {
 
-        //左面板缩放动画
+        /**
+         * 左边面板：
+         * 1.缩放动画
+         * 2.移动动画
+         * 2.透明度变化
+         */
+        //左面板缩放动画 percent:0.0->1.0  0.5->1
         mLeftContent.setScaleX(EvaluateUtils.evaluateFloat(percent, 0.5f, 1.0f));
         mLeftContent.setScaleY(EvaluateUtils.evaluateFloat(percent, 0.5f, 1.0f));
 
-        //左面板平移动画
+        //左面板平移动画 percent:0.0->1.0  -mWidth/2->0
         mLeftContent.setTranslationX(EvaluateUtils.evaluateFloat(percent, -mWidth / 2.0f, 0f));
 
-        //左面板透明度变化
+        //左面板透明度变化 percent:0.0->1.0  半透明->透明
         mLeftContent.setAlpha(EvaluateUtils.evaluateFloat(percent, 0.5f, 1.0f));
 
-        //主面板缩放动画
+        /**
+         * 主面板：
+         * 1.缩放动画
+         * 2.透明度变化
+         */
+        //主面板缩放动画 percent:0.0->1.0，1.0->0.8
         mMainContent.setScaleX(EvaluateUtils.evaluateFloat(percent, 1.0f, 0.8f));
         mMainContent.setScaleY(EvaluateUtils.evaluateFloat(percent, 1.0f, 0.8f));
 
-        //主面板透明度变化 percent 0->1  从透明到半透明
+        //主面板透明度变化 percent:0.0->1.0，1.0->0.8
         mMainContent.setAlpha(EvaluateUtils.evaluateFloat(percent, 1.0f, 0.8f));
 
-        //背景：亮度变化(颜色变化)
+        /**
+         * 整个背景的亮度变化
+         */
+        // percent:0.0->1.0，BLACK->TRANSPARENT
         getBackground().setColorFilter(EvaluateUtils.evaluateColor(percent, Color.BLACK, Color.TRANSPARENT), PorterDuff.Mode.SRC_OVER);
     }
 
