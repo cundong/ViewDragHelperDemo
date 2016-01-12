@@ -9,12 +9,12 @@ import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
 
+import com.cundong.viewdraghelper.douban.LikeDoubanFMActivity;
+import com.cundong.viewdraghelper.qq.LikeQQActivity;
+
 public class MainActivity extends AppCompatActivity implements View.OnClickListener {
 
     private Button mButton1, mButton2;
-
-    public MainActivity() {
-    }
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -35,7 +35,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         if (v == mButton1) {
             startActivity(new Intent(this, LikeQQActivity.class));
         } else if (v == mButton2) {
-            startActivity(new Intent(this, LikeQQActivity.class));
+            startActivity(new Intent(this, LikeDoubanFMActivity.class));
         }
     }
 

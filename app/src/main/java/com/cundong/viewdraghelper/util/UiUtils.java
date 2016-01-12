@@ -28,6 +28,4 @@ public class UiUtils {
         screens[1] = displayMetrics.heightPixels;
         return screens;
     }
-
-
 }

@@ -6,7 +6,7 @@ import android.view.MotionEvent;
 import android.widget.LinearLayout;
 
 /**
- * Created by liucundong on 2016/1/7.
+ * Created by cundong on 2016/1/7.
  *
  * 正文使用的容器，为了处理DragLayout打开状态时右面的Touch事件
  */

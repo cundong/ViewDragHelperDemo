@@ -1,4 +1,4 @@
-package com.cundong.viewdraghelper;
+package com.cundong.viewdraghelper.qq;
 
 import android.graphics.Color;
 import android.os.Build;
@@ -13,12 +13,11 @@ import android.widget.ImageView;
 import android.widget.ListView;
 import android.widget.TextView;
 
-import com.cundong.viewdraghelper.qq.DragLayout;
-import com.cundong.viewdraghelper.qq.MainContainer;
+import com.cundong.viewdraghelper.R;
 import com.cundong.viewdraghelper.util.Cheeses;
 
 /**
- * Created by liucundong on 2016/1/7.
+ * Created by cundong on 2016/1/7.
  *
  * 类似QQ那种侧滑
  */

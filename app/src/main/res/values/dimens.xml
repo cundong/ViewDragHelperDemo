@@ -3,4 +3,17 @@
     <dimen name="activity_horizontal_margin">16dp</dimen>
     <dimen name="activity_vertical_margin">16dp</dimen>
     <dimen name="fab_margin">16dp</dimen>
+
+    <!--豆瓣FM相关-->
+    <dimen name="buttom_bar_height">106dp</dimen>
+
+    <dimen name="cover_last_x">10dp</dimen>
+    <dimen name="cover_last_y">10dp</dimen>
+
+    <dimen name="title_last_x">106dp</dimen>
+    <dimen name="title_last_y">30dp</dimen>
+
+    <dimen name="singer_last_x">106dp</dimen>
+    <dimen name="singer_last_y">55dp</dimen>
+
 </resources>

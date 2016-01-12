@@ -27,4 +27,12 @@
         android:layout_below="@id/button1"
         android:layout_centerInParent="true"
         android:text="@string/like_douban_fm" />
+
+    <Button
+        android:id="@+id/button3"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/button2"
+        android:layout_centerInParent="true"
+        android:text="@string/slide_close" />
 </RelativeLayout>

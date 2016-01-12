@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.cundong.viewdraghelper.douban.DragLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/drag_layout"
+    android:layout_below="@+id/tab_view"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <!-- getChildAt(0)-->
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@android:color/white"
+        android:paddingBottom="@dimen/buttom_bar_height">
+
+        <ListView
+            android:id="@+id/music_list"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+
+    </FrameLayout>
+
+    <!-- getChildAt(1)-->
+    <RelativeLayout
+        android:id="@+id/music_container"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#E5E5E5">
+
+        <TextView
+            android:id="@+id/type_view"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_centerInParent="true"
+            android:layout_margin="10dip"
+            android:ellipsize="end"
+            android:singleLine="true"
+            android:text="摇滚 系 MHz"
+            android:textColor="#000000"
+            android:textSize="24sp" />
+
+        <ImageView
+            android:id="@+id/image_cover"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/type_view"
+            android:layout_centerInParent="true"
+            android:layout_gravity="center"
+            android:scaleType="center"
+            android:src="@drawable/bg_player_cover_default" />
+
+        <com.cundong.viewdraghelper.view.EndlessSrollingTextView
+            android:id="@+id/title_view"
+            android:layout_width="100dip"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/image_cover"
+            android:layout_centerInParent="true"
+            android:layout_marginBottom="10dip"
+            android:layout_marginTop="10dip"
+            android:ellipsize="marquee"
+            android:focusable="true"
+            android:gravity="center"
+            android:marqueeRepeatLimit="marquee_forever"
+            android:singleLine="true"
+            android:text="夜空中最亮的星能否听清那仰望的人心底的孤独和叹息"
+            android:textColor="#000000"
+            android:textSize="16sp" />
+
+        <TextView
+            android:id="@+id/singer_view"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/title_view"
+            android:layout_centerInParent="true"
+            android:layout_marginTop="5dip"
+            android:gravity="center"
+            android:singleLine="true"
+            android:text="逃跑计划"
+            android:textColor="#000000"
+            android:textSize="14sp" />
+
+        <LinearLayout
+            android:id="@+id/bottom_bar"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/buttom_bar_height"
+            android:layout_alignParentBottom="true"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:id="@+id/image_trash"
+                android:layout_width="0dip"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:scaleType="centerInside"
+                android:src="@drawable/ic_action_ban" />
+
+            <ImageView
+                android:id="@+id/image_like"
+                android:layout_width="0dip"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:scaleType="centerInside"
+                android:src="@drawable/ic_action_unfav" />
+
+
+            <ImageView
+                android:id="@+id/image_skip"
+                android:layout_width="0dip"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:scaleType="centerInside"
+                android:src="@drawable/ic_action_next" />
+        </LinearLayout>
+
+    </RelativeLayout>
+
+</com.cundong.viewdraghelper.douban.DragLayout>

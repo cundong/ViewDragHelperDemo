@@ -14,7 +14,7 @@ import android.widget.FrameLayout;
 import com.cundong.viewdraghelper.util.EvaluateUtils;
 
 /**
- * Created by liucundong on 2016/1/7.
+ * Created by cundong on 2016/1/7.
  *
  * 类似QQ那种侧滑
  */
