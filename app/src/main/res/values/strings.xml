@@ -4,6 +4,6 @@
 
     <string name="like_qq">like_qq</string>
     <string name="like_douban_fm">like_douban_fm</string>
-    <string name="slide_close">slide_close</string>
+    <string name="swipe_back">SwipeBack</string>
 
 </resources>

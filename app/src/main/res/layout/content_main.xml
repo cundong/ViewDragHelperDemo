@@ -34,5 +34,5 @@
         android:layout_height="wrap_content"
         android:layout_below="@id/button2"
         android:layout_centerInParent="true"
-        android:text="@string/slide_close" />
+        android:text="@string/swipe_back" />
 </RelativeLayout>

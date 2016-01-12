@@ -49,6 +49,7 @@ public class DragLayout extends FrameLayout {
 
     private void init() {
         mDragHelper = ViewDragHelper.create(this, new ViewDragCallback());
+        mDragHelper.setEdgeTrackingEnabled(ViewDragHelper.EDGE_LEFT | ViewDragHelper.EDGE_RIGHT);
     }
 
     public void setOnDragStatusListener(OnDragStatusChangedListener listener) {

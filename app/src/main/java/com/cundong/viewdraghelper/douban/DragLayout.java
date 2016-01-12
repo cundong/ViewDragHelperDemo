@@ -161,7 +161,7 @@ public class DragLayout extends FrameLayout {
         mSingerLastY = getContext().getResources().getDimensionPixelOffset(R.dimen.singer_last_y);
 
         mViewDragHelper = ViewDragHelper.create(this, new ViewDragCallback());
-        mViewDragHelper.setEdgeTrackingEnabled(ViewDragHelper.EDGE_ALL);
+        mViewDragHelper.setEdgeTrackingEnabled(ViewDragHelper.EDGE_TOP | ViewDragHelper.EDGE_BOTTOM);
 
         mTrashImgeView = (ImageView) findViewById(R.id.image_trash);
         mLikeImgeView = (ImageView) findViewById(R.id.image_like);
